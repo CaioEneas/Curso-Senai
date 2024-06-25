@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <style>
+      h1{
+        text-align: center;
+      }
+
+      .btn{
+        width: 100%;
+      }
+
+      .container .card{
+        max-width: 300px;
+        margin: 20px;
+        flex-direction: column;
+      }
+
+      .container__text-center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .pagination{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .accordion{
+        display: grid;
+        margin: 30px;
+        text-align: center;
+      }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-dark navbar-expand-lg border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Hospital Santa Marta</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Senhas de Atendimento</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Senhas chamadas
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">#202</a></li>
+                  <li><a class="dropdown-item" href="#">#203</a></li>
+                  <li><a class="dropdown-item" href="#">#204</a></li>
+                  <li><a class="dropdown-item" href="#">Mais...</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Preferencial</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <h1>Fila de Atendimento</h1>
+
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Atendimento Preferencial
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"> Atendimento preferencial a idosos com ou mais de 65 anos, portadores de deficiência física, gestantes, lactantes e pessoas acompanhadas por crianças de colo.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Atendimento Infantil
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body"> Atendimento para consultas sobre a saúde geral da criança, avaliando seu crescimento físico, desenvolvimento cognitivo e emocional, além de identificar quaisquer condições ou doenças potenciais.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Atendimento Normal
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Atendimento para pessoas sem nenhuma necessidade especial ou adultos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container__text-center">
+        <div class="card text-center">
+          
+          <div class="card-header" style="background-color: yellow;">
+            Atendimento Preferencial
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">#202</h5>
+            <p class="card-text">Comparecer ao guiche 01</p>
+            <div class="row">
+              <div class="col"><a href="#" class="btn btn-primary">CHAMAR</a></div>
+              <div class="col"><a data-bs-toggle="modal" data-bs-target="modalExclusao" class="btn btn-danger">EXCLUIR</a></div>
+            </div>
+          </div>
+          <div class="card-footer text-body-secondary">
+            10 min
+          </div>
+        </div>
+        
+        <div class="card text-center">
+          <div class="card-header" style="background-color: yellow;">
+            Atendimento Preferencial
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">#203</h5>
+            <p class="card-text">Comparecer ao guiche 02</p>
+            <div class="row">
+              <div class="col"><a href="#" class="btn btn-primary">CHAMAR</a></div>
+              <div class="col"><a data-bs-toggle="modal" data-bs-target="modalExclusao" class="btn btn-danger">EXCLUIR</a></div>
+            </div>
+          </div>
+          <div class="card-footer text-body-secondary">
+            7 min
+          </div>
+        </div>
+
+        <div class="card text-center">
+          <div class="card-header" style="background-color: greenyellow">
+            Atendimento Infantil
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">#204</h5>
+            <p class="card-text">Comparecer ao guiche 03</p>
+            <div class="row">
+              <div class="col"><a href="#" class="btn btn-primary">CHAMAR</a></div>
+              <div class="col"><a data-bs-toggle="modal" data-bs-target="modalExclusao" class="btn btn-danger">EXCLUIR</a></div>
+            </div>
+          </div>
+          <div class="card-footer text-body-secondary">
+            6 min
+          </div>
+        </div>
+
+        <div class="card text-center">
+          <div class="card-header">
+            Atendimento Infantil
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">#205</h5>
+            <p class="card-text">Comparecer ao guiche 04</p>
+            <div class="row">
+              <div class="col"><a href="#" class="btn btn-primary">CHAMAR</a></div>
+              <div class="col"><a data-bs-toggle="modal" data-bs-target="modalExclusao" class="btn btn-danger">EXCLUIR</a></div>
+            </div>
+          </div>
+          <div class="card-footer text-body-secondary">
+            2 min
+          </div>
+        </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalExclusao" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalExclusao" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Atenção</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Deseja excluir este atendimento?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+        <button type="button" class="btn btn-primary">Sim</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">Anterior</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">Próximo</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+      <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
