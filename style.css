@@ -1,0 +1,33 @@
+ h1{
+        text-align: center;
+      }
+
+      .btn{
+        width: 100%;
+      }
+
+      .container .card{
+        max-width: 300px;
+        margin: 20px;
+        flex-direction: column;
+      }
+
+      .container__text-center{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .pagination{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .accordion{
+        display: grid;
+        margin: 30px;
+        text-align: center;
+      }
